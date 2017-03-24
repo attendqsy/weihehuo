@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <link rel="stylesheet" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" href="css/commonHeader.css">
+    <link rel="stylesheet" href="css/personalInfo.css"/>
+</head>
+<body>
+<div class="header clearfix">
+    <a href="javascript:history.go(-1)" class="header-left"></a>
+    <p class="title-bar-text">编辑个人信息</p>
+    <a href="javascript:;" class="header-right"></a>
+</div>
+<div class="content">
+    <div class="head-portrait">
+        <img id="head-img" src="images/touxiang1.png" alt=""/>
+        <div id="avatar-img" class="head-portrait-shadow"></div>
+    </div>
+    <div class="personal-info">
+        <form action="">
+            <div class="personal-item">
+                <span>真实姓名</span>
+                <input type="text" value="王海鑫"/>
+            </div>
+            <div class="personal-item">
+                <span>所在公司</span>
+                <input type="text" value="金融公司"/>
+            </div>
+            <div class="personal-item" id="abcd">
+                <span>性别</span>
+                <input type="radio" name="sex" value="男" id="male"/><label class="sex-radio" for="male">男</label>
+                <input type="radio" name="sex" value="女" id="female"/><label class="sex-radio" for="female">女</label>
+            </div>
+            <div class="personal-item">
+                <span>出生日期</span>
+                <input type="date" name="birthday"/>
+            </div>
+            <div class="personal-item">
+                <span>担任职务</span>
+                <input type="text" value="银行客服经理"/>
+            </div>
+            <div class="personal-item personal-item1">
+                <span>个人简介</span>
+                <textarea name="introduction" id="introduction" placeholder="请输入"></textarea>
+            </div>
+
+            <div class="personal-item personal-phone">
+                <span>手机账号</span>
+                <input type="text" value="13566743051" readonly="readonly"/>
+            </div>
+            <div class="personal-submit">
+                <input value="确定" type="submit"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<article class="htmleaf-container">
+    <div id="clipArea"></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="打开"/>
+            <input id="file" type="file" onchange="setImagePreview();" accept="image/*" multiple/>
+        </div>
+        <button id="clipBtn">截取</button>
+    </div>
+    <div id="view"></div>
+</article>
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript" src="js/iscroll-zoom.js"></script>
+<script type="text/javascript" src="js/hammer.js"></script>
+<script type="text/javascript" src="js/jquery.photoClip.js"></script>
+<script type="text/javascript">
+
+//    var sex='女';
+//    $("#abcd input[type=radio][name=sex][value="+sex+"]").attr("checked",'checked');
+
+    $("#clipArea").photoClip({
+        width: 320,
+        height: 320,
+        file: "#file",
+        view: "#view",
+        ok: "#clipBtn"
+    });
+    function setImagePreview() {
+        var preview = document.getElementById("preview");
+        var file_head = document.getElementById("file");
+        var picture = file_head.value;
+        if (!picture.match(/.jpg|.gif|.png|.bmp|.jpeg/i))
+            return alert("您上传的图片格式不正确，请重新选择！");
+        if (preview && file_head.files && file_head.files[0])
+            preview.style.display = "block",
+                    preview.style.width = "63px",
+                    preview.style.height = "63px",
+                    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+        //return document.getElementById("DivUp").style.display = "block";
+    }
+
+
+    $("#avatar-img").click(function () {
+        $(".htmleaf-container").show();
+    });
+    $(function () {
+        $("#clipBtn").click(function () {
+            $("#head-img").attr("src", imgsource);
+            $(".htmleaf-container").hide();
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url: "b.php",
+                data: {'src': imgsource},
+                async: true,
+                error: function (request) {
+
+                },
+                success: function (data) {
+
+                }
+            });
+        });
+
+
+    });
+</script>
+</body>
+</html>

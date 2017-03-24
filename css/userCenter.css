@@ -1,0 +1,193 @@
+.clearfix{*zoom:1;clear:both;overflow:hidden;}
+.clearfix:after{
+    display:block;
+    content:"clear";
+    height:0; clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"], button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.bg-gray {
+    background: #f2f2f2;
+}
+
+.avatar-box {
+    width: 100%;
+    height: 25rem;
+    background: url("../images/touxiang1.png") no-repeat;
+    position: relative;
+    background-size: 100% auto;
+}
+
+.mengban-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    border: 0.3rem solid #ffffff;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    margin-left: -5rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-weight: normal;
+}
+
+.info-area {
+    color: #ffffff;
+    position: absolute;
+    top: 15rem;
+    width: 100%;
+    text-align: center;
+}
+
+.info-area h4 {
+    font-size: 1.8rem;
+    margin: .5rem 0;
+}
+
+.info-area p {
+    font-size: 1.4rem;
+
+}
+
+.info-area p i {
+    background: url("../images/icon-renzheng.png") no-repeat;
+    background-size: 1.4rem 1.4rem;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: .5rem;
+    vertical-align: sub;
+}
+
+.button-bar {
+    height: 8rem;
+    width: 100%;
+    padding-top: 1.5rem;
+    background: #ffffff;
+}
+
+.button-bar .buttons-item {
+    width: 50%;
+    /*width: 33.3%;*/
+    float: left;
+    border-right: .1rem solid #e2e2e2;
+    text-align: center;
+    color: #010101;
+    font-size: 1.4rem;
+    padding: 0 .5rem;
+}
+
+.button-bar .buttons-item p {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.item1, .item2, .item3 {
+    font-size: 1.6rem;
+}
+
+.button-bar .buttons-item .item1 {
+    color: #ffaf48;
+}
+
+.button-bar .buttons-item .item2 {
+    color: #fc7b53;
+}
+
+.button-bar .buttons-item .item3 {
+    color: #4da6f0;
+}
+.button-bar .buttons-item .item4 {
+    color: #94d94a;
+}
+.button-bar .buttons-item .item1 i {
+    background-image: url("../images/icon-uc-button1.png");
+}
+
+.button-bar .buttons-item .item2 i {
+    background-image: url("../images/icon-uc-button2.png");
+}
+
+.button-bar .buttons-item .item3 i {
+    background-image: url("../images/icon-uc-button3.png");
+}
+.button-bar .buttons-item .item4 i {
+    background-image: url("../images/icon-uc-button4.png");
+}
+.button-bar .buttons-item p i {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: 2rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+    background-repeat: no-repeat;
+}
+
+.button-bar .buttons-item:nth-last-of-type(1) {
+    border: none;
+}
+
+.user-center-list-area {
+    margin: 1rem 0;
+    background: #fff;
+}
+
+.user-center-list-bar {
+    height: 5rem;
+    border-bottom: .1rem solid #e2e2e2;
+    margin: 0 2rem;
+    display: block;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+.user-center-list-bar:nth-last-of-type(1) {
+    border: none;
+}
+
+.user-center-list-bar .list-icon {
+    float: left;
+    height: 2rem;
+    margin: 1.5rem .5rem;
+
+}
+
+.user-center-list-bar .list-right-arrow {
+    float: right;
+    width: 2rem;
+    height: 2rem;
+    margin: 1.5rem .5rem;
+}
+
+.login-out-button {
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background: #fff;
+    color: #f23030;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+}

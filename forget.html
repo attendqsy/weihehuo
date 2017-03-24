@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/commonHeader.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="header clearfix">
+    <a href="javascript:history.go(-1);" class="header-left"></a>
+    <p class="title-bar-text">忘记密码</p>
+    <a href="javascript:;" class="header-right"></a>
+</div>
+<section>
+    <form action="" method="post">
+        <div class="login-main-box">
+            <div class="login-input-bar">
+                <img src="images/login-icon-phone.png" alt="">
+                <input id="phone" class="login-input" type="text" name="phone" placeholder="请输入你的注册手机号码">
+            </div>
+            <div class="login-input-bar">
+                <img src="images/login-icon-lock.png" alt="">
+                <input id="yzm" class="yzm-input" type="text" name="yzm" placeholder="请输入验证码">
+                <button class="yzm-btn">获取验证码</button>
+            </div>
+            <div class="login-input-bar">
+                <img src="images/login-icon-key.png" alt="">
+                <input id="pass" class="login-input" type="password" name="password" placeholder="请重新设置账户密码">
+            </div>
+            <input class="submit-button" type="button" value="重置密码">
+            <a href="userAgreement.html" class="tiaokuan-a">使用条款和协议</a>
+        </div>
+    </form>
+</section>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        var phone = "";
+        var pass = "";
+        var yzm = "";
+        var phoneReg = /^(1[3|4|5|7|8]\d{9})$/;
+        var validCode = true;
+        var t = null;
+        $(".yzm-btn").click(function () {
+            var time = 60;
+            var _this = $(this);
+            phone = $("#phone").val();
+            if (phone == "") {
+                alert("请输入手机号");
+            } else if (!phoneReg.test(phone)) {
+                alert("手机格式不正确");
+            } else {
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    data: {'phone': phone},
+                    async: false,
+                    success: function (obj) { //登录成功后返回的数据
+                        //根据返回值进行状态显示
+                        if (validCode) {
+                            validCode = false;
+                            //发送验证码
+                            _this.text("60s");
+                            t = setInterval(function () {
+                                time--;
+                                _this.text(time + "s");
+                                if (time == 0) {
+                                    clearInterval(t);
+                                    validCode = true;
+                                    _this.text("获取验证码");
+                                }
+                            }, 1000);
+                        } else {
+                            //发送验证码失败
+                            alert("验证码已发送，请耐心等待。");
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+
+        $(".submit-button").click(function () {
+            phone = $("#phone").val();
+            pass = $("#pass").val();
+            yzm = $("#yzm").val();
+
+            if (phone == "") {
+                alert("请输入手机号");
+            } else if (!phoneReg.test(phone)) {
+                alert("手机格式不正确");
+            } else if (yzm == "") {
+                alert("请输入验证码");
+            } else if (pass == "") {
+                alert("请输入密码");
+            } else if (pass.length < 6 || pass.length > 20) {
+                alert("密码长度要求6~20位字符");
+            } else {
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    async: false,
+                    data: {phone: phone, yzm: yzm, pass: pass},
+                    success: function (obj) { //登录成功后返回的数据
+                        //根据返回值进行状态显示
+                        if (obj == 0) {
+                            alert("验证码有误！");
+                        } else if (obj == 1) {
+                            $(".submit-button").attr('type', "submit");
+                        } else {
+                            alert("用户已经注册！");
+                        }
+                    }
+                })
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+@charset "utf-8";
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.clearfix{*zoom:1;clear:both;overflow:hidden;}
+.clearfix:after{
+    display:block;
+    content:"";
+    height:0; clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+.header .header-left{
+    background-image: none;
+}
+.nav{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+}
+.nav .nav-item{
+    position: relative;
+    -webkit-flex: 1;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background-color: #fff;
+    border-right: 1px solid #f2f2f2;
+    z-index: 2;
+}
+.nav .nav-item:last-child{
+    border-right: none;
+}
+.nav .nav-item a{
+    color: #000;
+}
+.nav .nav-item a.cur{
+    color: #f23030;
+}
+.nav .nav-item i{
+    position: absolute;
+    border-style: solid;
+    border-width: .6rem;
+    display: inline-block;
+    margin-left: 1rem;
+    top: 2.1rem;
+    border-color: #f23030 transparent transparent transparent;
+}
+.nav .nav-item i.cur{
+    top: 1.6rem;
+    border-color: transparent transparent #f23030 transparent;
+}
+.nav .nav-item ul{
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    border: .1rem solid #f8f8f8;
+}
+.nav .nav-item ul li{
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom: .1rem solid #f2f2f2;
+}
+.nav .nav-item ul li a{
+    font-size: 1.4rem;
+}
+
+.list-item{
+    position: relative;
+    margin: 1rem 0;
+    background-color: #fff;
+    padding: 1rem 1rem 0;
+}
+.list-item a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.list-item .list-header img{
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    border: .1rem solid #f4f4f4;
+}
+.list-item .list-header h2{
+    font-size: 1.6rem;
+    color: #3e3e3e;
+    margin-left: 1rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: 56%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+.list-item .list-header .list-collection{
+    position: relative;
+    z-index: 3;
+    float: right;
+    color: #8b8b8b;
+    font-size: 1.4rem;
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+}
+.list-item .list-header .list-collection i{
+    width: 1.4rem;
+    height: 1.2rem;
+    display: inline-block;
+    background-image: url("../images/collection1.png");
+    background-size: 1.4rem 1.2rem;
+    margin-right: .5rem;
+    vertical-align: baseline;
+}
+.list-item .list-header .list-collection i.cur{
+    margin-right: 0;
+    background-image: url("../images/collection2.png");
+}
+.list-item .list-content{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+    width: 80%;
+    margin: 1.5rem auto 1rem;
+}
+.list-item .list-content .list-content-item{
+    -webkit-flex: 1;
+    text-align: center;
+}
+.list-item .list-content .list-content-item h4{
+    color: #3e3e3e;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+.list-item .list-content .list-content-item h4 span{
+    font-size: 1.8rem;
+}
+.list-item .list-content .list-content-item p{
+    color: #8a8a8a;
+    font-size: 1.8rem;
+    margin-top: .5rem;
+}
+.list-item .list-content .list-content-item .red{
+    color: #f23030;
+}
+
+.list-item .list-money{
+    border-top: .1rem solid #f2f2f2;
+    height: 5rem;
+    line-height: 5rem;
+}
+.list-item .list-money h3{
+    color: #646464;
+    font-size: 1.4rem;
+    float: left;
+}
+.list-item .list-money h3 i{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background-image: url("../images/money.png");
+    background-size: 1.5rem 1.5rem;
+    margin-right: .5rem;
+    vertical-align: text-bottom;
+}
+.list-item .list-money p{
+    float: right;
+}
+.list-item .list-money p span{
+    color: #f23030;
+    margin-right: .5rem;
+}
+/* 筛选 */
+.am-offcanvas-bar:after {
+    background: #ccc;
+}
+.am-offcanvas-bar {
+    background: #fff;
+}
+.sx-button-box{
+    position: fixed;
+    bottom:0;
+    right:0;
+    height:5rem;
+    line-height:5rem;
+    border-left: .1rem solid #ccc;
+    z-index: 1091;
+    width: 270px;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.sx-button-box-active{
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+     transform: translateX(0);
+}
+.sx-button-box input{
+    width:50%;
+    height:100%;
+    background: #D7D7D7;
+}
+.sx-button-box input[type=button]{
+    background: #D7D7D7;
+    color: #000;
+}
+.sx-button-box input[type=submit]{
+    background: #f23030;
+    color: #fff;
+}
+.sx-items-box{
+    margin-top: 1.5rem;
+}
+.sx-items-title{
+    color: #333;
+    font-size: 1.6rem;
+    margin-left: .5rem;
+}
+.sx-items-content{
+    margin-top: .5rem;
+}
+.sx-radios{
+    display: none;
+}
+.sx-radios-label{
+    width:30%;
+    height:3rem;
+    line-height:3rem;
+    border:.1rem solid #666;
+    color: #666;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight:normal;
+    float: left;
+    margin:1.5%;
+}
+.checked-label{
+    border:.1rem solid #f23030;
+    color: #f23030;
+}
+.sx-reset-box{
+    margin-top: 1rem;
+    text-align: center;
+}
+.sx-reset-button{
+    width:10rem;
+    height:3rem;
+    background: none;
+    color: #999;
+    font-size: 1.4rem;
+}
+.sx-reset-button:hover{
+    color: #666;
+}
+.header .header-right {
+    background: none;
+    width: 6rem;
+    margin: 0;
+    line-height: 5rem;
+    margin-right: 0rem;
+}
+
+.header .header-left {
+    width: 6rem;
+    margin: 1.5rem 0;
+}
+
+.header .title-bar-text {
+    width: 10rem;
+}

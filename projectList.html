@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" href="css/commonHeader.css"/>
+    <link rel="stylesheet" href="css/projectList.css"/>
+</head>
+<body>
+
+<div class="header clearfix">
+    <a href="javascript:;" class="header-left"></a>
+    <p class="title-bar-text">项目库</p>
+    <a href="projectList.html" class="header-right"></a>
+</div>
+<div class="nav">
+    <div class="nav-item">
+        <a class="cur" href="javascript:;">项目库</a>
+        <ul>
+            <li><a href="projectList.html">项目库</a></li>
+            <li><a href="productList.html">产品库</a></li>
+        </ul>
+        <i></i>
+    </div>
+    <div class="nav-item">
+        <a href="investorList.html">投资人</a>
+    </div>
+    <div class="nav-item">
+        <a href="userCenter.html">我的信息</a>
+    </div>
+</div>
+<section>
+    <div class="list-item">
+        <a href="projectDetail.html"></a>
+        <div class="list-header">
+            <img src="images/projectList-item01.jpg" alt=""/>
+            <div class="list-content">
+                <h2>小N科技<span class="list-collection" ><i class="cur"></i>已关注</span></h2>
+                <p>我们是一家基于区块链和安全多方计算技术的安全价值互联网络于区块多方计安全价值网络运营商...</p>
+                <ul class="clearfix">
+                    <li>北京市</li>
+                    <li>天使轮</li>
+                    <li>已上线</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-money clearfix" >
+            <h3><i></i>融资金额</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header">
+            <img src="images/projectList-item02.jpg" alt=""/>
+            <div class="list-content">
+                <h2>数炬科技<span class="list-collection"><i></i>关注</span></h2>
+                <p>我们是一家基于区块链和安全多方计算技术的安全价值互联网络于区块多方计安全价值网络运营商...</p>
+                <ul class="clearfix">
+                    <li>北京市</li>
+                    <li>天使轮</li>
+                    <li>已上线</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-money clearfix" >
+            <h3><i></i>融资金额</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header">
+            <img src="images/projectList-item03.jpg" alt=""/>
+            <div class="list-content">
+                <h2>汪星先生<span class="list-collection"><i></i>关注</span></h2>
+                <p>我们是一家基于区块链和安全多方计算技术的安全价值互联网络于区块多方计安全价值网络运营商...</p>
+                <ul class="clearfix">
+                    <li>北京市</li>
+                    <li>天使轮</li>
+                    <li>已上线</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-money clearfix" >
+            <h3><i></i>融资金额</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header">
+            <img src="images/projectList-item01.jpg" alt=""/>
+            <div class="list-content">
+                <h2>小N科技<span class="list-collection"><i></i>关注</span></h2>
+                <p>我们是一家基于区块链和安全多方计算技术的安全价值互联网络于区块多方计安全价值网络运营商...</p>
+                <ul class="clearfix">
+                    <li>北京市</li>
+                    <li>天使轮</li>
+                    <li>已上线</li>
+                </ul>
+            </div>
+        </div>
+        <div class="list-money clearfix" >
+            <h3><i></i>融资金额</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".nav-item .cur").click(function(){
+            var oUl = $(".nav-item ul");
+            if(oUl.css("display") === "none"){
+                oUl.css("display","block");
+                $(".nav-item i").addClass("cur");
+                return false;
+            }else{
+                oUl.css("display","none");
+                $(".nav-item i").removeClass("cur");
+                return false;
+            }
+
+        });
+
+        $(".list-collection").click(function(){
+            var oI = $(this).find("i");
+            if(!oI.hasClass("cur")){
+                $(this).html("<i class='cur'></i>已关注");
+            }else if(oI.hasClass("cur")){
+                $(this).html("<i></i>关注");
+            }
+        });
+
+        $("body").click(function(){
+            $(".nav-item ul").css("display","none");
+            $(".nav-item i").removeClass("cur");
+        })
+    })
+</script>
+</body>
+</html>

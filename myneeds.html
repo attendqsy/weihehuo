@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/commonHeader.css">
+    <style type="text/css">
+        body,html{
+            background-color: #f2f2f2;
+        }
+        .content{
+            background-color: #fff;
+        }
+        .content .content-part1{
+            padding: 3rem 2rem 10rem 4rem;
+        }
+        .content .content-part1 label{
+            width: 48%;
+            color: #3e3e3e;
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+        .content .content-part1 input{
+            display: none;
+        }
+        .content .content-part1 i{
+            width: 1.3rem;
+            height: 1.3rem;
+            display: inline-block;
+            background: url("images/myneeds-icon.png") no-repeat;
+            background-size: 1.3rem 2.6rem;
+            background-position: 0 -1.3rem;
+            margin-right: .6rem;
+            vertical-align: sub;
+        }
+        .content .content-part1 i.cur{
+            background-position: 0 0;
+        }
+        .content .content-part2{
+            border-top: 1rem solid #f2f2f2;
+            width: 100%;
+            height: 5rem;
+            background-color: #f2f2f2;
+        }
+        .content .content-part2 input{
+            display: block;
+            color: #f23030;
+            font-size: 1.8rem;
+            height: 4rem;
+            line-height: 4rem;
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            -webkit-border: none;
+            margin: 0 auto;
+        }
+        .header-right{
+            background-image: none!important;
+        }
+    </style>
+</head>
+<body>
+<div class="header clearfix">
+    <a href="javascript:history.go(-1);" class="header-left"></a>
+    <p class="title-bar-text">我的需求</p>
+    <a href="javascript:;" class="header-right"></a>
+</div>
+
+<div class="content">
+    <form action="">
+        <div class="content-part1">
+            <label for="check1"><i></i><input name="needs" id="check1" type="checkbox" value="零售"/>零售</label>
+            <label for="check2"><i></i><input name="needs" id="check2" type="checkbox" value="保险业"/>保险业</label>
+            <label for="check3"><i></i><input name="needs" id="check3" type="checkbox" value="电子商务"/>电子商务</label>
+            <label for="check4"><i></i><input name="needs" id="check4" type="checkbox" value="医疗业"/>医疗业</label>
+            <label for="check5"><i></i><input name="needs" id="check5" type="checkbox" value="制作业"/>制作业</label>
+            <label for="check6"><i></i><input name="needs" id="check6" type="checkbox" value="教育行业"/>教育行业</label>
+            <label for="check7"><i></i><input name="needs" id="check7" type="checkbox" value="广告业"/>广告业</label>
+            <label for="check8"><i></i><input name="needs" id="check8" type="checkbox" value="人工智能"/>人工智能</label>
+            <label for="check9"><i></i><input name="needs" id="check9" type="checkbox" value="新闻业"/>新闻业</label>
+            <label for="check10"><i></i><input name="needs" id="check10" type="checkbox" value="电影行业"/>电影行业</label>
+            <label for="check11"><i></i><input name="needs" id="check11" type="checkbox" value="通信业"/>通信业</label>
+            <label for="check12"><i></i><input name="needs" id="check12" type="checkbox" value="出版业"/>出版业</label>
+            <label for="check13"><i></i><input name="needs" id="check13" type="checkbox" value="物流业"/>物流业</label>
+            <label for="check14"><i></i><input name="needs" id="check14" type="checkbox" value="医疗行业"/>医疗行业</label>
+            <label for="check15"><i></i><input name="needs" id="check15" type="checkbox" value="酒店与旅游行业"/>酒店与旅游行业</label>
+            <label for="check16"><i></i><input name="needs" id="check16" type="checkbox" value="汽车行业"/>汽车行业</label>
+            <label for="check17"><i></i><input name="needs" id="check17" type="checkbox" value="餐饮行业"/>餐饮行业</label>
+            <label for="check18"><i></i><input name="needs" id="check18" type="checkbox" value="大数据行业"/>大数据行业</label>
+            <label for="check19"><i></i><input name="needs" id="check19" type="checkbox" value="金融业"/>金融业</label>
+            <label for="check20"><i></i><input name="needs" id="check20" type="checkbox" value="区域链"/>区域链</label>
+        </div>
+        <div class="content-part2">
+            <input type="submit" value="保存"/>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".content-part1 label input").click(function(){
+            if($(this).attr("checked")=="checked"){
+                $(this).prev().removeClass("cur");
+                $(this).removeAttr("checked")
+            }else{
+                $(this).prev().addClass("cur");
+                $(this).attr("checked","checked");
+            }
+        });
+
+        var needs=['餐饮行业','金融业','汽车行业'];
+        for(var i=0;i<needs.length;i++){
+            $(".content-part1 input[type=checkbox][name=needs][value='"+needs[i]+"']").attr("checked",'checked').prev().addClass("cur");
+        }
+
+    })
+
+</script>
+</body>
+</html>

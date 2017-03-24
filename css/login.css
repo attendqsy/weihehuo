@@ -1,0 +1,128 @@
+.header .header-right{
+    background-image: none;
+}
+.login-main-box {
+    /*width: 25rem;*/
+    margin: 6rem 2rem 3rem 2rem;
+}
+
+.login-input-bar {
+    width: 100%;
+    height: 5rem;
+    border-bottom: .1rem solid #efefef;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.login-input-bar img {
+    width: 2rem;
+    height: 1.9rem;
+    float: left;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+
+.login-input-bar .login-input {
+    width: 17rem;
+    height: 2rem;
+    border: none;
+    background: none;
+    line-height: 2rem;
+    padding: 0 .5rem;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+.login-input-bar .yzm-input{
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    background: none;
+    line-height: 2rem;
+    padding: 0 .5rem;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+.login-input-bar .yzm-btn{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    background: #f23030;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    float: right;
+    margin-top: 1rem;
+}
+input[type=submit].submit-button,input[type=button].submit-button {
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+    color: #fff;
+    background: #f23030;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 5rem;
+}
+.bottom-aside{
+    margin:0 2rem;
+    text-align: center;
+}
+.register-bar{
+    width: 100%;
+    height: 4rem;
+}
+.register-bar a{
+    width:45%;
+    height: 3rem;
+    line-height:3rem;
+    display: inline-block;
+    border-right:.1rem solid #f1f1f1;
+    font-size: 1.4rem;
+}
+.register-bar a:nth-last-of-type(1){
+    border:none;
+}
+.yj-login-bar{
+    width:100%;
+    position: relative;
+    height:2rem;
+    margin-top: 2rem;
+}
+.yj-login-bar .bg-line{
+    position: absolute;
+    z-index: 1;
+    height:.1rem;
+    width:100%;
+    background: #f1f1f1;
+    top:.9rem;
+    left:0;
+}
+.yj-login-bar p{
+    position: absolute;
+    z-index: 2;
+    display: block;
+    background: #fff;
+    left:50%;
+    margin-left: -5rem;
+    width:10rem;
+    height:2rem;
+    line-height:2rem;
+    font-size: 1.6rem;
+}
+.wechat-img{
+    width:4rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.tiaokuan-a{
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #bebebe;
+    font-size: 1.4rem;
+}
+.tiaokuan-a:hover{
+    color: #bebebe;
+}

@@ -1,0 +1,96 @@
+@charset "utf-8";
+html,body{
+    background-color: #f2f2f2;
+}
+.part1{
+    margin: 1rem 0;
+    background-color: #fff;
+}
+.part1 .part1-item{
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+    border-bottom: .1rem solid #f2f2f2;
+    height: 7rem;
+    line-height: 7rem;
+    padding: 0 2rem;
+}
+.part1 .part1-item .part1-item-left{
+    color: #3e3e3e;
+    font-size: 1.6rem;
+    -webkit-flex: 3;
+}
+.part1 .part1-item .part1-item-right{
+    color: #3e3e3e;
+    font-size: 1.6rem;
+    -webkit-flex: 7;
+}
+.part1 .part1-item .part1-item-right i{
+    width: 2.3rem;
+    height: 2.1rem;
+    background-image: url("../images/recharge-icon.png");
+    background-size: 2.3rem 2.1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+.part1 .part1-item .part1-item-right input{
+    font-size: 1.6rem;
+    border: none;
+    width: 50%;
+    padding: 0 .5rem;
+}
+
+.part2{
+    margin: 1rem 0;
+}
+.part2 input{
+    background-color: #fff;
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    color: #f23030;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.part3{
+    margin: 1rem 0;
+    background-color: #fff;
+    padding-bottom: 2rem;
+}
+.part3 .part-header{
+    height: 5rem;
+    line-height: 5rem;
+    border-bottom: .1rem solid #f2f2f2;
+    padding: 0 2rem;
+}
+.part3 .part-header h3{
+    color: #3e3e3e;
+    font-size: 1.8rem;
+}
+.part3 .part3-content{
+    margin: 0 2rem;
+}
+.part3 .part3-content .part3-title{
+    height: 5rem;
+    line-height: 5rem;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+}
+.part3 .part3-content .part3-item{
+    height: 4rem;
+    line-height: 4rem;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-flow: row;
+}
+.part3 .part3-content .part3-title p,.part3 .part3-content .part3-item p{
+    -webkit-flex: 1;
+    text-align: center;
+    color: #3e3e3e;
+    font-size: 1.6rem;
+}
+.part3 .part3-content .part3-title p{
+    font-size: 1.8rem;
+}

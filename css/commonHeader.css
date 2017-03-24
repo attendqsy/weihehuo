@@ -1,0 +1,56 @@
+/*头部*/
+.header {
+    height: 5rem;
+    background-color: #fff;
+    border-bottom: .1rem solid #efefef;
+    text-align: center;
+}
+
+.header a {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    margin: 1.5rem 1.5rem 0;
+}
+
+.header .header-left {
+    float: left;
+    background-image: url("../images/personalInfo-icon2.png");
+}
+
+.header .header-right {
+    float: right;
+    background-image: url("../images/personalInfo-icon1.png");
+}
+
+.header .title-bar-text {
+    line-height: 5rem;
+    text-align: center;
+    width: 16rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+}
+
+/**/
+input[type="submit"],input[type="reset"],input[type="button"],input[type="date"],button{
+    -webkit-appearance: none;
+    border-radius: 0;
+    border:none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}

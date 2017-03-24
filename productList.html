@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" href="css/commonHeader.css"/>
+    <link rel="stylesheet" href="css/productList.css"/>
+
+</head>
+<body>
+
+<div class="header clearfix">
+    <a href="javascript:;" class="header-left"></a>
+    <p class="title-bar-text">产品库</p>
+    <a href="javascript:;" class="header-right" data-am-offcanvas="{target: '#doc-oc-demo3'}">筛选</a>
+</div>
+<div class="nav">
+    <div class="nav-item">
+        <a class="cur" href="javascript:;">产品库</a>
+        <ul>
+            <li><a href="projectList.html">项目库</a></li>
+            <li><a href="productList.html">产品库</a></li>
+        </ul>
+        <i></i>
+    </div>
+    <div class="nav-item">
+        <a href="investorList.html">投资人</a>
+    </div>
+    <div class="nav-item">
+        <a href="userCenter.html">我的信息</a>
+    </div>
+</div>
+<section>
+    <div class="list-item">
+        <a href="productDetail.html"></a>
+        <div class="list-header clearfix">
+            <img src="images/projectList-item02.jpg" alt=""/>
+            <h2>联储证券-众城4号金堂项目</h2>
+            <span class="list-collection"><i></i>关注</span>
+        </div>
+        <div class="list-content">
+            <div class="list-content-item">
+                <h4 class="red"><span>7.0</span>%</h4>
+                <p>预期收益率</p>
+            </div>
+            <div class="list-content-item">
+                <h4><span>24</span>个月</h4>
+                <p>产品期限</p>
+            </div>
+        </div>
+        <div class="list-money">
+            <h3><i></i>起投门槛</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header clearfix">
+            <img src="images/projectList-item03.jpg" alt=""/>
+            <h2>联储证券-众城4号金堂项目</h2>
+            <span class="list-collection"><i></i>关注</span>
+        </div>
+        <div class="list-content">
+            <div class="list-content-item">
+                <h4 class="red"><span>9.0</span>%</h4>
+                <p>预期收益率</p>
+            </div>
+            <div class="list-content-item">
+                <h4><span>22</span>个月</h4>
+                <p>产品期限</p>
+            </div>
+        </div>
+        <div class="list-money">
+            <h3><i></i>起投门槛</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header clearfix">
+            <img src="images/projectList-item01.jpg" alt=""/>
+            <h2>联储证券-众城4号金堂项目</h2>
+            <span class="list-collection"><i></i>关注</span>
+        </div>
+        <div class="list-content">
+            <div class="list-content-item">
+                <h4 class="red"><span>9.5</span>%</h4>
+                <p>预期收益率</p>
+            </div>
+            <div class="list-content-item">
+                <h4><span>23</span>个月</h4>
+                <p>产品期限</p>
+            </div>
+        </div>
+        <div class="list-money">
+            <h3><i></i>起投门槛</h3>
+            <p><span>6,000,000</span>元</p>
+        </div>
+    </div>
+    <div class="list-item">
+        <a href="javascript:;"></a>
+        <div class="list-header clearfix">
+            <img src="images/projectList-item02.jpg" alt=""/>
+            <h2>联储证券-众城4号金堂项目</h2>
+            <span class="list-collection"><i></i>关注</span>
+        </div>
+        <div class="list-content">
+            <div class="list-content-item">
+                <h4 class="red"><span>7.0</span>%</h4>
+                <p>预期收益率</p>
+            </div>
+            <div class="list-content-item">
+                <h4><span>24</span>个月</h4>
+                <p>产品期限</p>
+            </div>
+        </div>
+        <div class="list-money">
+            <h3><i></i>起投门槛</h3>
+            <p><span>5,000,000</span>元</p>
+        </div>
+    </div>
+</section>
+<!-- 按钮触发器， 需要指定 target -->
+<!--<button class="am-btn am-btn-success" data-am-offcanvas="{target: '#doc-oc-demo3'}">右侧显示边栏</button>-->
+
+<!-- 侧边栏内容 -->
+<div id="doc-oc-demo3" class="am-offcanvas">
+    <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+        <div class="am-offcanvas-content">
+            <form id="sx-form" action="#" method="get">
+                <div class="sx-items-box">
+                    <div class="sx-items-title">产品库分类</div>
+                    <div class="sx-items-content clearfix">
+                        <input id="sx1-1" class="sx-radios" type="radio" name="sx1" value="全部" checked><label
+                            class="sx-radios-label checked-label" for="sx1-1">全部</label>
+                        <input id="sx1-2" class="sx-radios" type="radio" name="sx1" value="银行"><label
+                            class="sx-radios-label" for="sx1-2">银行</label>
+                        <input id="sx1-3" class="sx-radios" type="radio" name="sx1" value="资管信托"><label
+                            class="sx-radios-label" for="sx1-3">资管信托</label>
+                        <input id="sx1-4" class="sx-radios" type="radio" name="sx1" value="基金类"><label
+                            class="sx-radios-label" for="sx1-4">基金类</label>
+                        <input id="sx1-5" class="sx-radios" type="radio" name="sx1" value="保险"><label
+                            class="sx-radios-label" for="sx1-5">保险</label>
+                        <input id="sx1-6" class="sx-radios" type="radio" name="sx1" value="P2P"><label
+                            class="sx-radios-label" for="sx1-6">P2P</label>
+                        <input id="sx1-7" class="sx-radios" type="radio" name="sx1" value="另类投资"><label
+                            class="sx-radios-label" for="sx1-7">另类投资</label>
+                        <input id="sx1-8" class="sx-radios" type="radio" name="sx1" value="产品求购"><label
+                            class="sx-radios-label" for="sx1-8">产品求购</label>
+                    </div>
+                </div>
+                <div class="sx-items-box">
+                    <div class="sx-items-title">预期收益率</div>
+                    <div class="sx-items-content clearfix">
+                        <input id="sx2-1" class="sx-radios" type="radio" name="sx2" value="不限" checked><label
+                            class="sx-radios-label checked-label" for="sx2-1">不限</label>
+                        <input id="sx2-2" class="sx-radios" type="radio" name="sx2" value="5%以下"><label
+                            class="sx-radios-label" for="sx2-2">5%以下</label>
+                        <input id="sx2-3" class="sx-radios" type="radio" name="sx2" value="5%-8%"><label
+                            class="sx-radios-label" for="sx2-3">5%-8%</label>
+                        <input id="sx2-4" class="sx-radios" type="radio" name="sx2" value="8%-10%"><label
+                            class="sx-radios-label" for="sx2-4">8%-10%</label>
+                        <input id="sx2-5" class="sx-radios" type="radio" name="sx2" value="10%-12%"><label
+                            class="sx-radios-label" for="sx2-5">10%-12%</label>
+                        <input id="sx2-6" class="sx-radios" type="radio" name="sx2" value="12%-15%"><label
+                            class="sx-radios-label" for="sx2-6">12%-15%</label>
+                        <input id="sx2-7" class="sx-radios" type="radio" name="sx2" value="15%以上"><label
+                            class="sx-radios-label" for="sx2-7">15%以上</label>
+                        <input id="sx2-8" class="sx-radios" type="radio" name="sx2" value="浮动收益"><label
+                            class="sx-radios-label" for="sx2-8">浮动收益</label>
+                        <input id="sx2-9" class="sx-radios" type="radio" name="sx2" value="暂无"><label
+                            class="sx-radios-label" for="sx2-9">暂无</label>
+                    </div>
+                </div>
+                <div class="sx-items-box">
+                    <div class="sx-items-title">产品期限</div>
+                    <div class="sx-items-content clearfix">
+                        <input id="sx3-1" class="sx-radios" type="radio" name="sx3" value="不限" checked><label
+                            class="sx-radios-label checked-label" for="sx3-1">不限</label>
+                        <input id="sx3-2" class="sx-radios" type="radio" name="sx3" value="1个月内"><label
+                            class="sx-radios-label" for="sx3-2">1个月内</label>
+                        <input id="sx3-3" class="sx-radios" type="radio" name="sx3" value="1-3个月"><label
+                            class="sx-radios-label" for="sx3-3">1-3个月</label>
+                        <input id="sx3-4" class="sx-radios" type="radio" name="sx3" value="3-6个月"><label
+                            class="sx-radios-label" for="sx3-4">3-6个月</label>
+                        <input id="sx3-5" class="sx-radios" type="radio" name="sx3" value="6-12个月"><label
+                            class="sx-radios-label" for="sx3-5">6-12个月</label>
+                        <input id="sx3-6" class="sx-radios" type="radio" name="sx3" value="1-3年"><label
+                            class="sx-radios-label" for="sx3-6">1-3年</label>
+                        <input id="sx3-7" class="sx-radios" type="radio" name="sx3" value="3-5年"><label
+                            class="sx-radios-label" for="sx3-7">3-5年</label>
+                        <input id="sx3-8" class="sx-radios" type="radio" name="sx3" value="5年以上"><label
+                            class="sx-radios-label" for="sx3-8">5年以上</label>
+                        <input id="sx3-9" class="sx-radios" type="radio" name="sx3" value="产品求购"><label
+                            class="sx-radios-label" for="sx3-9">无固定期限</label>
+                    </div>
+                </div>
+                <div class="sx-reset-box">
+                <input type="reset" class="sx-reset-button" value="清除选项">
+                    </div>
+                <div style="height: 5rem;"></div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!--<div class="sx-button-box am-offcanvas-bar-flip am-offcanvas-bar">-->
+<div class="sx-button-box am-offcanvas-bar-flip">
+    <input type="button" value="取消" class="cancel-button" data-rel="close"><input type="submit"
+                                                                                  value="确认"
+                                                                                  class="submit-button">
+</div>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/amazeui.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".nav-item .cur").click(function () {
+            var oUl = $(".nav-item ul");
+            if (oUl.css("display") === "none") {
+                oUl.css("display", "block");
+                $(".nav-item i").addClass("cur");
+                return false;
+            } else {
+                oUl.css("display", "none");
+                $(".nav-item i").removeClass("cur");
+                return false;
+            }
+
+        });
+
+        $(".list-collection").click(function () {
+            var oI = $(this).find("i");
+            if (!oI.hasClass("cur")) {
+                $(this).html("<i class='cur'></i>已关注");
+            } else if (oI.hasClass("cur")) {
+                $(this).html("<i></i>关注");
+            }
+        });
+
+        $("body").click(function () {
+            $(".nav-item ul").css("display", "none");
+            $(".nav-item i").removeClass("cur");
+        });
+
+
+        //筛选
+        $(".header-right").click(function () {
+            $(".sx-button-box").addClass("sx-button-box-active");
+        });
+        //筛选取消
+        $('.cancel-button').click(function () {
+            var urlSX1 = getUrlParam("sx1");
+            var urlSX2 = getUrlParam("sx2");
+            var urlSX3 = getUrlParam("sx3");
+            if(urlSX1==null){
+                $("#sx1-1").click();
+            }else{
+                $("input[name=sx1][value='" + urlSX1 + "']").click();
+            }
+            if(urlSX2==null){
+                $("#sx2-1").click();
+            }else{
+                $("input[name=sx2][value='" + urlSX2 + "']").click();
+            }
+            if(urlSX3==null){
+                $("#sx3-1").click();
+            }else{
+                $("input[name=sx3][value='" + urlSX3 + "']").click();
+            }
+            $("#doc-oc-demo3").offCanvas('close');
+            $(".sx-button-box").removeClass("sx-button-box-active");
+        });
+        //筛选确认
+        $('.submit-button').click(function () {
+            $("#sx-form").submit();
+            $("#doc-oc-demo3").offCanvas('close');
+            $(".sx-button-box").removeClass("sx-button-box-active");
+        });
+        //打开关闭侧边栏时
+        $("#doc-oc-demo3").on('open.offcanvas.amui', function() {
+            console.log(' 打开了。');
+        }).on('close.offcanvas.amui', function() {
+            console.log(' 关闭了。');
+            $(".sx-button-box").removeClass("sx-button-box-active");
+        });
+        //单选选择
+        $(".sx-radios").change(function () {
+            $(".sx-radios").next().removeClass("checked-label");
+            $(".sx-radios").each(function () {
+                var selected = this.checked;
+                if (selected) {
+                    $(this).next().addClass("checked-label");
+                }
+            })
+        });
+        //清除按钮
+        $(".sx-reset-button").click(function(){
+            $("#sx1-1").click();
+            $("#sx2-1").click();
+            $("#sx3-1").click();
+        });
+        //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return decodeURI(r[2]);
+            return null; //返回参数值
+            //if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+        //默认选中地址栏中获取的参数
+        var urlSX1 = getUrlParam("sx1");
+        var urlSX2 = getUrlParam("sx2");
+        var urlSX3 = getUrlParam("sx3");
+        $("input[name=sx1][value='" + urlSX1 + "']").click();
+        $("input[name=sx2][value='" + urlSX2 + "']").click();
+        $("input[name=sx3][value='" + urlSX3 + "']").click();
+    });
+
+</script>
+</body>
+</html>

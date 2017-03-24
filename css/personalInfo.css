@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: "clear";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.content {
+    padding-top: 5rem;
+    background-color: #fff;
+}
+
+.head-portrait {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.head-portrait .head-portrait-shadow {
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: rgba(0, 0, 0, .2);
+    z-index: 2;
+    box-shadow: 0 0 0 .5rem rgba(255, 255, 255, .7);
+    border-radius: 50%;
+}
+
+.head-portrait img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.personal-info {
+
+}
+
+.personal-info .personal-item {
+    height: 5.5rem;
+    line-height: 5.5rem;
+    margin: 0 2.5rem;
+    border-bottom: .1rem solid #e2e2e2;
+}
+
+.personal-info .personal-item1 {
+    height: 11rem;
+    border-bottom: none;
+}
+
+.personal-info .personal-item span {
+    color: #919191;
+    font-size: 1.4rem;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    width: 25%;
+    display: inline-block;
+}
+
+.personal-info .personal-item input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    width: 70%;
+}
+.personal-info .personal-item input[type="date"] {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    width: 70%;
+}
+.personal-info .personal-item textarea {
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 10.5rem;
+    resize: none;
+    line-height: 2.5rem;
+    padding-top: 1.5rem;
+}
+.personal-info .personal-item input[type="radio"]{
+    margin-left: 1rem;
+}
+.personal-info .personal-item .sex-radio{
+    font-weight:normal;
+    margin-left:.5rem;
+    margin-right:2rem;
+    font-size: 1.4rem;
+}
+.personal-info .personal-phone {
+    height: 8.5rem;
+    line-height: 5.5rem;
+    border-top: 1rem solid #f2f2f2;
+    border-bottom: 2rem solid #f2f2f2;
+    background-color: #fff;
+    margin: 0;
+    padding: 0 2.5rem;
+}
+
+.personal-info .personal-phone span {
+    color: #919191;
+    font-size: 1.4rem;
+    opacity: .65;
+    filter: alpha(opacity=65);
+}
+
+.personal-info .personal-phone input {
+    color: #919191;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.personal-info .personal-submit input {
+    width: 100%;
+    height: 10rem;
+    background-color: #fff;
+    color: #f23030;
+    text-align: center;
+    line-height: 5rem;
+    border: none;
+    outline: none;
+    z-index: 99;
+    border-bottom: 5rem solid #f2f2f2;
+}
+
+.htmleaf-container {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #ccc;
+    display: none;
+    z-index: 999;
+}
+
+#clipArea {
+    height: 90%;
+}
+
+#clipBtn {
+    float: right;
+    height: 100%;
+    width: 50%;
+    background-color: #000;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 1.4rem;
+    z-index: 999;
+    border-left: 1px solid #a0a0a0;
+}
+
+.foot-use {
+    background-color: #fff;
+    height: 10%;
+    width: 100%;
+    position: relative;
+}
+
+.uploader1 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    cursor: default;
+    float: left;
+}
+
+.button {
+    float: left;
+    height: 100%;
+    display: inline-block;
+    outline: 0 none;
+    margin: 0;
+    border: 0;
+    width: 6rem;
+    font-size: 1.4rem;
+}
+
+.uploader1 input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    opacity: 0;
+}
+
+.blue .button {
+    font-size: 1.4rem;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    height: 100%;
+}
